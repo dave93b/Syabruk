@@ -23,7 +23,6 @@ namespace Lab2
         private static List<PortInfo> GetOpenPort()
         {
             IPGlobalProperties properties = IPGlobalProperties.GetIPGlobalProperties();
-            IPEndPoint[] tcpEndPoints = properties.GetActiveTcpListeners();
             TcpConnectionInformation[] tcpConnections = properties.GetActiveTcpConnections();
 
             return tcpConnections.Select(p =>

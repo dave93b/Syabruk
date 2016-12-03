@@ -60,7 +60,7 @@ namespace Lab7_8_C__
                 {
                     try
                     {
-                        hostname = Dns.GetHostByAddress(reply.Address).HostName;
+                        hostname = Dns.GetHostEntry(reply.Address).HostName;
                     }
                     catch (SocketException) { /* No host available for that address. */ }
                 }
